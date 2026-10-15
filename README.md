@@ -31,15 +31,7 @@ Compute used for the reported numbers: 2 CPU cores, ~16 min per model, 3000 step
 On a Colab GPU the same notebook finishes in a few minutes; you can raise `max_steps` in the `cfg` cell
 for lower perplexity.
 
-## Core code (what you must be able to explain)
 
-`build_rope_cache`, `rotate_pairs`, `apply_rope` (Section 3 of the notebook) implement paper Eq. 15 / 34.
-They are applied to queries and keys only, inside `CausalSelfAttention.forward`.
-The cell right after them numerically checks that `<R_m q, R_n k>` depends only on `n - m`.
-
-## Results
-
-See the results table printed in Section 8 of the notebook and Section IV of `report.pdf`.
 
 ## Sources / references consulted
 
